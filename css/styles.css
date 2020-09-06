@@ -97,10 +97,6 @@ div.wrapper-content .timeline form input {
   padding-left: 15px;
 }
 
-div.wrapper-content .timeline form input::placeholder {
-  /*como eu troco???*/
-}
-
 div.wrapper-content .timeline form div.button {
   align-self: flex-end;
   display: flex;
