@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(255, 205, 105, 0.15);
+  font-family: "Roboto", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+.content {
+  margin: 0;
+  padding: 0 8%;
+}
+
+div.wrapper-content {
+  display: flex;
+}
+
+div.wrapper-content aside.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 5%;
+}
+
+div.wrapper-content aside.search img.logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20%;
+}
+
+div.wrapper-content aside.search h1 {
+  font-family: "Lobster", cursive;
+  font-size: 35px;
+  color: black;
+}
+
+div.wrapper-content aside.search input {
+  height: 25px;
+  margin-top: 20%;
+  border-radius: 25px;
+  border: 1px solid #ffcd69;
+  padding-left: 10px;
+}
+
+div.wrapper-content .timeline {
+  width: 50%;
+  flex: 1;
+  background: #ffffff;
+  margin: 0;
+}
+
+div.wrapper-content .timeline .timeline-title {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffcd69;
+  padding: 10px 15px;
+}
+
+div.wrapper-content .timeline .timeline-title img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+div.wrapper-content .timeline .timeline-title h2 {
+  font-size: 20px;
+}
+
+div.wrapper-content .timeline form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-bottom: 1px solid #ffcd69;
+}
+
+div.wrapper-content .timeline form label {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+div.wrapper-content .timeline form input {
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  padding-left: 15px;
+}
+
+div.wrapper-content .timeline form input::placeholder {
+  /*como eu troco???*/
+}
+
+div.wrapper-content .timeline form button {
+  width: 90px;
+  height: 30px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  background-color: #a0c8ff;
+  color: #ffffff;
+  border-radius: 25px;
+  border: 1px solid #a0c8ff;
+  align-self: flex-end;
+}
+
+div.wrapper-content .timeline ul.tweets {
+  list-style: none;
+}
+
+div.wrapper-content .timeline ul.tweets li {
+  border-bottom: 1px solid #ffcd69;
+  padding: 10px 15px;
+  display: flex;
+}
+
+div.wrapper-content .timeline ul.tweets li > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+div.wrapper-content .timeline ul.tweets li .info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.wrapper-content .timeline ul.tweets li .info strong {
+  font-size: 14px;
+  color: black;
+}
+
+div.wrapper-content .timeline ul.tweets li .info strong span {
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+}
+
+div.wrapper-content .timeline ul.tweets li .info p {
+  font-size: 14px;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+
+div.wrapper-content .timeline ul.tweets li .actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+div.wrapper-content .timeline ul.tweets li .actions div {
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content .timeline ul.tweets li .actions div p {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+div.wrapper-content .timeline ul.tweets li .actions a img {
+  width: 15px;
+  height: 15px;
+  margin: 10px 5px 0 10px;
+}
+
+div.wrapper-content .timeline ul.tweets li .actions a:first-child {
+  margin-top: 0;
+}
+
+div.wrapper-content aside.profile {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+}
+
+div.wrapper-content aside.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 30px 30px 20px 30px;
+}
+
+div.wrapper-content aside.profile h2 {
+  font-size: 20px;
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 15px;
+}
