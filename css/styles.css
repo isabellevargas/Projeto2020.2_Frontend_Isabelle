@@ -141,6 +141,7 @@ div.wrapper-content .timeline ul.tweets {
 
 div.wrapper-content .timeline ul.tweets li {
   border-bottom: 1px solid #ffcd69;
+  margin: 20px;
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,6 @@
 var botao = document.querySelector("#botao-texto");
 var form = document.querySelector("#form-texto");
+var i = 0;
 
 botao.addEventListener("click", function (event) {
   event.preventDefault();
@@ -16,13 +17,15 @@ function obtemTweet(form) {
     nome: "Isa",
     username: "@isavargas",
     mensagem: form.mensagem.value,
-    imagem: "/images/gian-cescon-00ByEXKcSkA-unsplash.jpg",
+    imagem: "/images/isa.jpeg",
   };
   return tweet;
 }
 
 function adicionaTweet(tweet) {
   var Li = montaLi(tweet);
+  Li.id = "tweet-" + i;
+  i++;
   var timeline = document.querySelector("#tweets");
   timeline.prepend(Li);
 }
@@ -54,17 +57,27 @@ function montaLi(tweet) {
 function montaActions() {
   var divFora = document.createElement("div");
   divFora.classList.add("actions");
+
   var divDentro = document.createElement("div");
+
   var favoritar = document.createElement("a");
   favoritar.classList.add("favoritar");
+  favoritar.onclick = function () {
+    curtir(this.id);
+  };
+  favoritar.id = i;
   var favoritarIcon = document.createElement("img");
+  favoritarIcon.src = "/images/003-favourite.svg";
+  var likes = document.createElement("p");
+  likes.id = "likes-" + i;
+
   var deletar = document.createElement("a");
   deletar.classList.add("excluir");
-
+  deletar.onclick = function () {
+    excluir(this.id);
+  };
+  deletar.id = i;
   var deletarIcon = document.createElement("img");
-  var likes = document.createElement("p");
-
-  favoritarIcon.src = "/images/003-favourite.svg";
   deletarIcon.src = "/images/delete.svg";
 
   var quantidade = document.createTextNode(0);
@@ -109,7 +122,6 @@ function montaTexto(dado, classe) {
 }
 
 function montaImagem(dado, classe) {
-  //console.log(dado);
   var img = document.createElement("img");
   //img.classList.add(classe);
   img.src = dado;
