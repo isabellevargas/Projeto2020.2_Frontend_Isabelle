@@ -17,7 +17,12 @@
       <aside class="search">
         <img class="logo" src="/images/passaro.svg" alt="Logo" />
         <h1>Piupiuwer</h1>
-        <input type="text" placeholder="Buscar" />
+        <form id="form-busca">
+          <input type="text" placeholder="Digite" name="busca" />
+          <button type="button" id="botao-busca">Buscar</button>
+        </form>
+        <span>Resultado da pesquisa:</span>
+        <span id="resultado"></p>
       </aside>
       <section class="timeline">
         <div class="timeline-title">
@@ -40,30 +45,7 @@
           </div>
         </form>
 
-        <ul class="tweets" id="tweets">
-          <li>
-            <div class="divisao">
-              <img
-                src="/images/gian-cescon-00ByEXKcSkA-unsplash.jpg"
-                alt="icon"
-              />
-              <div class="info">
-                <strong class="nome-tweet">Isa</strong>
-                <span class="user-tweet">@isavargas</span>
-                <p class="texto-tweet">Primeiro piu! :)</p>
-              </div>
-            </div>
-            <div class="actions">
-              <div>
-                <a href="" class="favoritar"
-                  ><img src="/images/003-favourite.svg"
-                /></a>
-                <p>3</p>
-              </div>
-              <a href="" class="excluir"><img src="/images/delete.svg" /></a>
-            </div>
-          </li>
-        </ul>
+        <ul class="tweets" id="tweets"></ul>
       </section>
       <aside class="profile">
         <img src="images/ivana-cajina-_7LbC5J-jw4-unsplash.jpg" alt="profile" />
@@ -75,5 +57,6 @@
     <script src="js/adicionar-piu.js"></script>
     <script src="js/request.js"></script>
     <script src="js/interagir-piu.js"></script>
+    <script src="js/buscar.js"></script>
   </body>
 </html>

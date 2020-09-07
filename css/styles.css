@@ -53,6 +53,22 @@ div.wrapper-content aside.search input {
   padding-left: 10px;
 }
 
+div.wrapper-content aside.search button {
+  height: 20px;
+  width: 50px;
+  font-size: 12px;
+  margin-left: 5px;
+  background-color: #ff7d97;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #ff7d97;
+}
+
+div.wrapper-content aside.search span {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 div.wrapper-content .timeline {
   width: 50%;
   flex: 1;

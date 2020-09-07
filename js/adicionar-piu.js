@@ -60,13 +60,14 @@ function montaActions() {
   var favoritarIcon = document.createElement("img");
   var deletar = document.createElement("a");
   deletar.classList.add("excluir");
+
   var deletarIcon = document.createElement("img");
   var likes = document.createElement("p");
 
   favoritarIcon.src = "/images/003-favourite.svg";
   deletarIcon.src = "/images/delete.svg";
 
-  var quantidade = document.createTextNode(3);
+  var quantidade = document.createTextNode(0);
   likes.appendChild(quantidade);
 
   favoritar.appendChild(favoritarIcon);
@@ -108,7 +109,7 @@ function montaTexto(dado, classe) {
 }
 
 function montaImagem(dado, classe) {
-  console.log(dado);
+  //console.log(dado);
   var img = document.createElement("img");
   //img.classList.add(classe);
   img.src = dado;
@@ -128,4 +129,8 @@ function montaSpan(dado, classe) {
   span.textContent = dado;
   span.classList.add(classe);
   return span;
+}
+
+function excluir() {
+  console.log("fui clicado");
 }
