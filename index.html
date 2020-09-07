@@ -13,6 +13,19 @@
     />
   </head>
   <body>
+    <header id="main-header">
+      <div class="content">
+        <nav>
+          <ul>
+            <li><a href="">Feed</a></li>
+            <li><a href="">Notificações</a></li>
+            <li><a href=""> Meu perfil</a></li>
+            <li><a href=""> Configurações</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </header>
     <div class="wrapper-content content">
       <aside class="search">
         <img class="logo" src="/images/passaro.svg" alt="Logo" />
@@ -24,6 +37,7 @@
         <span>Resultado da pesquisa:</span>
         <span id="resultado"></p>
       </aside>
+
       <section class="timeline">
         <div class="timeline-title">
           <img src="/images/023-home.svg" />
@@ -32,12 +46,7 @@
 
         <form id="form-texto">
           <label>Poste um piu!</label>
-          <input
-            type="text"
-            placeholder="Digite aqui"
-            id="caixa-texto"
-            name="mensagem"
-          />
+          <textarea type="text" placeholder="Digite aqui" id="caixa-texto" name="mensagem"> </textarea>
           <div class="button">
             <p id="frase-erro"></p>
             <p id="contador">0/140</p>
@@ -47,11 +56,14 @@
 
         <ul class="tweets" id="tweets"></ul>
       </section>
+
       <aside class="profile">
         <img src="images/isa.jpeg" alt="profile" />
         <h2>Isa</h2>
         <p>@isavargas</p>
+        <span>18 anos<br>Curitiba<br>ESFJ<br>Trainee na PoliJúnior</span>
       </aside>
+
     </div>
     <script src="js/validar-piu.js"></script>
     <script src="js/adicionar-piu.js"></script>

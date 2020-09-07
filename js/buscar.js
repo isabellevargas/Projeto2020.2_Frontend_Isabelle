@@ -18,6 +18,7 @@ botaoBusca.addEventListener("click", function (event) {
         document.querySelector("#resultado").innerHTML = texto;
       }
     }
+
     if (texto == "") {
       var texto = "Não foi encontrado resultado";
       document.querySelector("#resultado").innerHTML = texto;

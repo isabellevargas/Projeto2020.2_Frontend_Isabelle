@@ -123,7 +123,6 @@ function montaTexto(dado, classe) {
 
 function montaImagem(dado, classe) {
   var img = document.createElement("img");
-  //img.classList.add(classe);
   img.src = dado;
 
   return img;
@@ -141,8 +140,4 @@ function montaSpan(dado, classe) {
   span.textContent = dado;
   span.classList.add(classe);
   return span;
-}
-
-function excluir() {
-  console.log("fui clicado");
 }
