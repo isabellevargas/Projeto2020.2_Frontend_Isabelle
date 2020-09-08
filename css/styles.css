@@ -5,7 +5,8 @@
 }
 
 body {
-  background: rgba(255, 205, 105, 0.15);
+  background: linear-gradient(135deg, #b164ae, #7cc1db);
+  /*rgba(200, 121, 168, 0.73);*/
   font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -38,24 +39,31 @@ header#main-header .content {
 
 header#main-header ul {
   display: flex;
-  list-style: none; /*tira os pontinhos da lista*/
+  list-style: none;
 }
 
 header#main-header nav ul li {
   display: flex;
   align-items: center;
+
+  font-size: 13px;
+  color: #b164ae;
+  font-weight: bold;
+
   margin-left: 30px;
 }
 
-header#main-header nav ul li a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #667581;
-  font-weight: bold;
+header#main-header nav ul li img {
+  width: 20px;
+  height: 20px;
 }
 
 header#main-header nav ul li:first-child {
   margin: 0;
+}
+
+header#main-header nav ul li img {
+  margin-right: 7px;
 }
 
 div.wrapper-content {
@@ -79,15 +87,19 @@ div.wrapper-content aside.search img.logo {
 div.wrapper-content aside.search h1 {
   font-family: "Lobster", cursive;
   font-size: 35px;
-  color: black;
+  color: white;
 }
 
 div.wrapper-content aside.search input {
   height: 25px;
   margin-top: 20%;
   border-radius: 25px;
-  border: 1px solid #ffcd69;
+  border: 1px solid white;
   padding: 10px;
+}
+
+div.wrapper-content aside.search input::placeholder {
+  color: #c879a8;
 }
 
 div.wrapper-content aside.search button {
@@ -95,15 +107,16 @@ div.wrapper-content aside.search button {
   width: 50px;
   font-size: 12px;
   margin-left: 5px;
-  background-color: #ff7d97;
+  background-color: #7cc1db;
   color: white;
   border-radius: 5px;
-  border: 1px solid #ff7d97;
+  border: 1px solid #7cc1db;
 }
 
 div.wrapper-content aside.search span {
   margin-top: 10px;
   font-size: 15px;
+  color: white;
 }
 
 div.wrapper-content .timeline {
@@ -116,7 +129,7 @@ div.wrapper-content .timeline {
 div.wrapper-content .timeline .timeline-title {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ffcd69;
+  border-bottom: 1px solid rgba(200, 121, 168, 0.73);
   padding: 10px 15px;
 }
 
@@ -134,7 +147,7 @@ div.wrapper-content .timeline form {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  border-bottom: 1px solid #ffcd69;
+  border-bottom: 1px solid rgba(200, 121, 168, 0.73);
 }
 
 div.wrapper-content .timeline form label {
@@ -173,10 +186,10 @@ div.wrapper-content .timeline form button {
   height: 30px;
   font-size: 18px;
   margin-bottom: 15px;
-  background-color: #a0c8ff;
+  background-color: #7cc1db;
   color: #ffffff;
   border-radius: 25px;
-  border: 1px solid #a0c8ff;
+  border: 1px solid #7cc1db;
 }
 
 div.wrapper-content .timeline ul.tweets {
@@ -184,7 +197,7 @@ div.wrapper-content .timeline ul.tweets {
 }
 
 div.wrapper-content .timeline ul.tweets li {
-  border-bottom: 1px solid #ffcd69;
+  border-bottom: 1px solid rgba(200, 121, 168, 0.73);
   margin: 20px;
   padding: 10px 15px;
   display: flex;
@@ -199,8 +212,8 @@ div.wrapper-content .timeline ul.tweets li div.divisao {
 }
 
 div.wrapper-content .timeline ul.tweets li div.divisao img {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -249,7 +262,7 @@ div.wrapper-content .timeline ul.tweets li .actions div {
 
 div.wrapper-content .timeline ul.tweets li .actions div p {
   text-decoration: none;
-  color: black;
+  color: #b164ae;
   font-size: 12px;
 }
 
@@ -269,6 +282,7 @@ div.wrapper-content aside.profile {
   flex-direction: column;
   align-items: center;
   margin-left: 5%;
+  color: white;
 }
 
 div.wrapper-content aside.profile img {
