@@ -3,6 +3,22 @@ var botao = document.querySelector("#botao-texto");
 var erro = document.querySelector("#frase-erro");
 var contador = document.querySelector("#contador");
 
+validaInicial();
+
+/*Função que é responsável por impedir o usuário de fazer um piu vazio logo ao entrar na página. */
+function validaInicial() {
+  if (caixaDeTexto.value == " ") {
+    botao.disabled = true;
+    botao.style.opacity = 0.5;
+    erro.textContent = "O piu está vazio";
+    contador.textContent = "0/140";
+  }
+  return;
+}
+
+/*Fica esperando por um input na caixa de piu. Caso esteja vazio ou tenha caracteres em excesso ele bloqueia o botão
+e o usuário não pode postar. Caso tenha caracteres em excesso ele também coloca o contador em vermelho, assim como
+o texto. Quando volta ao "normal" ele permite de novo a publicação. */
 caixaDeTexto.addEventListener("input", function () {
   var texto = caixaDeTexto.value;
 

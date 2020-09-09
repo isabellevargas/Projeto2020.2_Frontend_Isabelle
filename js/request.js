@@ -1,3 +1,6 @@
+/*Busca na API fornecida os pius em formato JSON e os converte. Depois, chama uma função para adicionar eles a 
+timeline*/
+
 var xhr = new XMLHttpRequest();
 
 xhr.open("GET", "https://next.json-generator.com/api/json/get/EkyZfHLU_");

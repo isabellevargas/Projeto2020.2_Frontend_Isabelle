@@ -1,17 +1,28 @@
 var botao = document.querySelector("#botao-texto");
 var form = document.querySelector("#form-texto");
 var i = 0;
+var arr = [];
 
+var caixaDeTexto = document.querySelector("#caixa-texto");
+
+var erro = document.querySelector("#frase-erro");
+var contador = document.querySelector("#contador");
+
+/*Espera um clique no botão de piar para tentar enviar o piu*/
 botao.addEventListener("click", function (event) {
   event.preventDefault();
 
-  var form = document.querySelector("#form-texto");
-  var tweet = obtemTweet(form);
+  validaInicial();
 
+  var tweet = obtemTweet(form);
   adicionaTweet(tweet);
+
   form.reset();
+  contador.textContent = "0/140";
+  validaInicial();
 });
 
+/* Função que pega o piu do campo de digitação*/
 function obtemTweet(form) {
   var tweet = {
     nome: "Isa",
@@ -22,6 +33,7 @@ function obtemTweet(form) {
   return tweet;
 }
 
+/* Função que adiciona o novo piu a timeline de pius já existentes*/
 function adicionaTweet(tweet) {
   var Li = montaLi(tweet);
   Li.id = "tweet-" + i;
@@ -30,6 +42,7 @@ function adicionaTweet(tweet) {
   timeline.prepend(Li);
 }
 
+/* Monta a estrutura geral do piu*/
 function montaLi(tweet) {
   var tweetLi = document.createElement("li");
   var divFora = document.createElement("div");
@@ -54,6 +67,7 @@ function montaLi(tweet) {
   return tweetLi;
 }
 
+/*Função que monta as actions de cada piu, atribuindo id's para cada piu de modo único*/
 function montaActions() {
   var divFora = document.createElement("div");
   divFora.classList.add("actions");
@@ -71,6 +85,7 @@ function montaActions() {
   favoritarIcon.id = "icon-favoritar-" + i;
   var likes = document.createElement("p");
   likes.id = "likes-" + i;
+  arr[i] = 0;
 
   var deletar = document.createElement("a");
   deletar.classList.add("excluir");
@@ -96,6 +111,7 @@ function montaActions() {
   return divFora;
 }
 
+/*Monta a div do nome, user e piu*/
 function montaDiv(
   nome,
   user,
@@ -115,6 +131,7 @@ function montaDiv(
   return div;
 }
 
+/*Monta o texto do piu*/
 function montaTexto(dado, classe) {
   var p = document.createElement("p");
   p.textContent = dado;
@@ -122,6 +139,7 @@ function montaTexto(dado, classe) {
   return p;
 }
 
+/*Monta o icon do usuário*/
 function montaImagem(dado, classe) {
   var img = document.createElement("img");
   img.src = dado;
@@ -129,6 +147,7 @@ function montaImagem(dado, classe) {
   return img;
 }
 
+/*Monta o nome do user do piu*/
 function montaStrong(dado, classe) {
   var strong = document.createElement("strong");
   strong.textContent = dado;
@@ -136,6 +155,7 @@ function montaStrong(dado, classe) {
   return strong;
 }
 
+/*Monta o user do piu*/
 function montaSpan(dado, classe) {
   var span = document.createElement("span");
   span.textContent = dado;

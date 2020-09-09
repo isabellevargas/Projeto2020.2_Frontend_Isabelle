@@ -6,7 +6,6 @@
 
 body {
   background: linear-gradient(135deg, #b164ae, #7cc1db);
-  /*rgba(200, 121, 168, 0.73);*/
   font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -165,7 +164,7 @@ div.wrapper-content .timeline form textarea {
 }
 
 div.wrapper-content .timeline form textarea::placeholder {
-  padding-top: 30px;
+  padding-top: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }

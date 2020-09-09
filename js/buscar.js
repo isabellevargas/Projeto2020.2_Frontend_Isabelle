@@ -1,6 +1,7 @@
 var botaoBusca = document.querySelector("#botao-busca");
 var formBusca = document.querySelector("#form-busca");
 
+/*Fica esperando um clique no botão para realizar a busca*/
 botaoBusca.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -8,6 +9,8 @@ botaoBusca.addEventListener("click", function (event) {
 
   var pesquisa = formBusca.busca.value;
 
+  /*Se houver algum texto no campo de busca ele faz a verificação entre todos os users para ver se acha correspondência.
+  Caso não encontre, ele retorna a mensagem.*/
   if (pesquisa.length > 0) {
     var texto = "";
 
