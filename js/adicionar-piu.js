@@ -28,7 +28,7 @@ function obtemTweet(form) {
     nome: "Isa",
     username: "@isavargas",
     mensagem: form.mensagem.value,
-    imagem: "/images/isa.jpeg",
+    imagem: "images/isa.jpeg",
   };
   return tweet;
 }
@@ -81,7 +81,7 @@ function montaActions() {
   };
   favoritar.id = i;
   var favoritarIcon = document.createElement("img");
-  favoritarIcon.src = "/images/003-favourite 1.svg";
+  favoritarIcon.src = "images/003-favourite 1.svg";
   favoritarIcon.id = "icon-favoritar-" + i;
   var likes = document.createElement("p");
   likes.id = "likes-" + i;
@@ -94,7 +94,7 @@ function montaActions() {
   };
   deletar.id = i;
   var deletarIcon = document.createElement("img");
-  deletarIcon.src = "/images/delete 2.svg";
+  deletarIcon.src = "images/delete 2.svg";
 
   var quantidade = document.createTextNode(0);
   likes.appendChild(quantidade);

@@ -9,13 +9,13 @@ function curtir(id) {
     var likesAntigos = parseInt(objeto.textContent);
     var likesAtuais = likesAntigos + 1;
     objeto.innerHTML = likesAtuais;
-    icon.src = "/images/003-favourite 2.svg";
+    icon.src = "images/003-favourite 2.svg";
     arr[id] = 1;
   } else {
     var likesAntigos = parseInt(objeto.textContent);
     var likesAtuais = likesAntigos - 1;
     objeto.innerHTML = likesAtuais;
-    icon.src = "/images/003-favourite 1.svg";
+    icon.src = "images/003-favourite 1.svg";
     arr[id] = 0;
   }
 }
